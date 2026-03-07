@@ -1,0 +1,15 @@
+kubectl get hpa -n default -w
+
+NAME                     REFERENCE                           TARGETS                          MINPODS   MAXPODS   REPLICAS   AGE
+fastapi-gitops-starter   Deployment/fastapi-gitops-starter   cpu: 2%/10%, memory: 25%/80%     1         10        1          4m36s
+fastapi-gitops-starter   Deployment/fastapi-gitops-starter   cpu: 2%/10%, memory: 25%/80%     1         10        1          5m
+fastapi-gitops-starter   Deployment/fastapi-gitops-starter   cpu: 184%/10%, memory: 26%/80%   1         10        1          10m
+fastapi-gitops-starter   Deployment/fastapi-gitops-starter   cpu: 184%/10%, memory: 26%/80%   1         10        4          10m
+fastapi-gitops-starter   Deployment/fastapi-gitops-starter   cpu: 233%/10%, memory: 25%/80%   1         10        8          10m
+fastapi-gitops-starter   Deployment/fastapi-gitops-starter   cpu: 233%/10%, memory: 25%/80%   1         10        10         10m
+fastapi-gitops-starter   Deployment/fastapi-gitops-starter   cpu: 2%/10%, memory: 25%/80%     1         10        10         13m
+fastapi-gitops-starter   Deployment/fastapi-gitops-starter   cpu: 2%/10%, memory: 25%/80%     1         10        10         16m
+fastapi-gitops-starter   Deployment/fastapi-gitops-starter   cpu: 2%/10%, memory: 26%/80%     1         10        4          18m
+fastapi-gitops-starter   Deployment/fastapi-gitops-starter   cpu: 2%/10%, memory: 26%/80%     1         10        4          20m
+fastapi-gitops-starter   Deployment/fastapi-gitops-starter   cpu: 2%/10%, memory: 26%/80%     1         10        2          22m
+fastapi-gitops-starter   Deployment/fastapi-gitops-starter   cpu: 2%/10%, memory: 26%/80%     1         10        1          25m
