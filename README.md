@@ -287,4 +287,7 @@ kubectl get hpa -n default -w
 ## 3.5 Questions
 
 1. The auto-scaling did not work as expected. What could be the possible reasons?
+The metrics server was likely still not running or reporting data, so HPA took no action, or the pod spec was probably missing resources.requests.cpu, which HPA needs as a baseline to compute utilization. Also, the workload may have been too lightweight to push the CPU above the target threshold.
+
 2. How does Horizontal Pod Autoscaling (HPA) work in Kubernetes?
+HPA polls the Metrics API to compute average CPU utilization across pods, compares it to the configured target, and, based on that information, scales the number of pods in a deployment.
